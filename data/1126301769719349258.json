@@ -1,37 +1,8 @@
 {
 	"authorizedUsers": [],
-	"leaderboard": [
-		{
-			"userId": "409123426641510402",
-			"points": 10,
-			"solved": 1
-		}
-	],
-	"problems": [
-		{
-			"name": "Foo",
-			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1128397535866785813/1128442665726382202/Screen_Shot_2023-03-16_at_3.01.21_PM.png",
-			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1128397535866785813/1128442666720428052/Screen_Shot_2023-03-16_at_3.01.21_PM.png",
-			"hasHint": false,
-			"id": 1,
-			"releaseDate": "2023-07-11T17:00:00.000Z",
-			"expires": false,
-			"solvedBy": [
-				{
-					"userId": "409123426641510402",
-					"date": "2023-07-11T21:48:38.930Z"
-				}
-			],
-			"solutionViewers": [],
-			"points": 10,
-			"answer": 10,
-			"active": true,
-			"released": true
-		}
-	],
-	"potwRoleId": "1128442585522909315",
-	"solvedRoleId": "1128442713738588302",
-	"problemWriterRoleId": "1128442587477459075",
-	"potwChannelId": "1126301836920487946",
-	"latestReleaseId": 1
+	"leaderboard": [],
+	"problems": [],
+	"potwRoleId": "1128446350552473600",
+	"solvedRoleId": "1128446352100167690",
+	"problemWriterRoleId": "1128446352674795681"
 }
