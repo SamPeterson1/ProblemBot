@@ -5,12 +5,20 @@ module.exports = {
         return ('0' + num).slice(-2);
     },
 
+    subtractHours(date, hours) {
+        newDate = new Date(date);
+	    newDate.setHours(date.getHours() - hours);
+        return newDate;
+    },
+
     formatDay(date) {
-        return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+	    newDate = this.subtractHours(date, 5);
+        return `${newDate.getMonth() + 1}/${newDate.getDate()}/${newDate.getFullYear()}`;
     },
     
     formatTime(date) {
-        var hours = date.getHours();
+	    newDate = this.subtractHours(date, 5);
+        var hours = newDate.getHours();
         var suffix = 'AM';
     
         if (hours >= 12) {
@@ -18,7 +26,7 @@ module.exports = {
             suffix = 'PM';
         }
     
-        return `${hours}:${this.asTwoDigits(date.getMinutes())}:${this.asTwoDigits(date.getSeconds())} ${suffix}`;
+        return `${hours}:${this.asTwoDigits(newDate.getMinutes())}:${this.asTwoDigits(newDate.getSeconds())} ${suffix}`;
     },
 
     getProblem(data, id) {
@@ -30,9 +38,58 @@ module.exports = {
         return null;
     },
 
+    getNumAttempts(problem, userId) {
+        for (var i = 0; i < problem.attempts.length; i ++) {
+            if (problem.attempts[i].userId === userId)
+                return problem.attempts[i].count;
+        }
+
+        return 0;
+    },
+
+    getProblemPowerPoints(problem) {
+        return problem.points - Math.min(3, Math.max(0, Math.log(problem.solvedBy.length)));
+    },
+
+    getUserPoints(data, leaderboardEntry) {    
+        var points = 0;  
+
+        const userId = leaderboardEntry.userId;
+        
+        for (var i = 0; i < leaderboardEntry.solved.length; i ++) {
+            const problem = this.getProblem(data, leaderboardEntry.solved[i]);
+            const attempts = this.getNumAttempts(problem, userId);
+            const powerPoints = this.getProblemPowerPoints(problem);
+
+            var problemPoints = Math.pow(0.6, attempts) * powerPoints;
+
+            if (this.hasViewedHint(problem, userId))
+                problemPoints *= 0.5;
+
+            points += problemPoints;
+        }
+
+        return points;
+    },
+
+    roundHundreths(num) {
+        return Math.round(num * 100) / 100;
+    },
+
     hasViewedSolution(problem, userId) {
         for (var i = 0; i < problem.solutionViewers.length; i ++) {
             var viewerId = problem.solutionViewers[i];
+
+            if (viewerId === userId)
+                return true;
+        }
+
+        return false;
+    },
+
+    hasViewedHint(problem, userId) {
+        for (var i = 0; i < problem.hintViewers.length; i ++) {
+            var viewerId = problem.hintViewers[i];
 
             if (viewerId === userId)
                 return true;

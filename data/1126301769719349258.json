@@ -1,8 +1,200 @@
 {
 	"authorizedUsers": [],
-	"leaderboard": [],
-	"problems": [],
-	"potwRoleId": "1128446350552473600",
-	"solvedRoleId": "1128446352100167690",
-	"problemWriterRoleId": "1128446352674795681"
+	"leaderboard": [
+		{
+			"userId": "409123426641510402",
+			"solved": [
+				1
+			]
+		},
+		{
+			"userId": "409123426641510402",
+			"solved": [
+				2
+			]
+		},
+		{
+			"userId": "409123426641510402",
+			"solved": [
+				3
+			]
+		}
+	],
+	"problems": [
+		{
+			"name": "ee",
+			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326104908738660/Screenshot_2023-08-20_at_10.21.39_PM.png",
+			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326105915359242/Screenshot_2023-08-20_at_10.19.46_PM.png",
+			"hint": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326106984919100/Screenshot_2023-08-20_at_10.22.32_PM.png",
+			"hasHint": true,
+			"id": 1,
+			"releaseDate": "2023-08-21T17:00:00.000Z",
+			"expires": false,
+			"solvedBy": [
+				{
+					"userId": "409123426641510402",
+					"date": "2023-08-21T23:32:23.777Z"
+				}
+			],
+			"solutionViewers": [],
+			"hintViewers": [
+				"409123426641510402"
+			],
+			"attempts": [
+				{
+					"userId": "409123426641510402",
+					"count": 2
+				}
+			],
+			"points": 5,
+			"answer": 1,
+			"active": true,
+			"released": true
+		},
+		{
+			"name": "ee",
+			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326104908738660/Screenshot_2023-08-20_at_10.21.39_PM.png",
+			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326105915359242/Screenshot_2023-08-20_at_10.19.46_PM.png",
+			"hint": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326106984919100/Screenshot_2023-08-20_at_10.22.32_PM.png",
+			"hasHint": true,
+			"id": 3,
+			"releaseDate": "2023-08-21T17:00:00.000Z",
+			"expires": false,
+			"solvedBy": [],
+			"solutionViewers": [],
+			"hintViewers": [
+				"409123426641510402"
+			],
+			"attempts": [
+				{
+					"userId": "409123426641510402",
+					"count": 2
+				}
+			],
+			"points": 5,
+			"answer": 1,
+			"active": true,
+			"released": true
+		},
+		{
+			"name": "ee",
+			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326104908738660/Screenshot_2023-08-20_at_10.21.39_PM.png",
+			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326105915359242/Screenshot_2023-08-20_at_10.19.46_PM.png",
+			"hint": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326106984919100/Screenshot_2023-08-20_at_10.22.32_PM.png",
+			"hasHint": true,
+			"id": 2,
+			"releaseDate": "2023-08-21T17:00:00.000Z",
+			"expires": false,
+			"solvedBy": [],
+			"solutionViewers": [],
+			"hintViewers": [
+				"409123426641510402"
+			],
+			"attempts": [
+				{
+					"userId": "409123426641510402",
+					"count": 2
+				}
+			],
+			"points": 5,
+			"answer": 1,
+			"active": true,
+			"released": true
+		},
+		{
+			"name": "ee",
+			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326104908738660/Screenshot_2023-08-20_at_10.21.39_PM.png",
+			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326105915359242/Screenshot_2023-08-20_at_10.19.46_PM.png",
+			"hint": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326106984919100/Screenshot_2023-08-20_at_10.22.32_PM.png",
+			"hasHint": true,
+			"id": 1,
+			"releaseDate": "2023-08-21T17:00:00.000Z",
+			"expires": false,
+			"solvedBy": [
+				{
+					"userId": "409123426641510402",
+					"date": "2023-08-21T23:32:23.777Z"
+				}
+			],
+			"solutionViewers": [],
+			"hintViewers": [
+				"409123426641510402"
+			],
+			"attempts": [
+				{
+					"userId": "409123426641510402",
+					"count": 2
+				}
+			],
+			"points": 5,
+			"answer": 1,
+			"active": true,
+			"released": true
+		},
+		{
+			"name": "ee",
+			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326104908738660/Screenshot_2023-08-20_at_10.21.39_PM.png",
+			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326105915359242/Screenshot_2023-08-20_at_10.19.46_PM.png",
+			"hint": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326106984919100/Screenshot_2023-08-20_at_10.22.32_PM.png",
+			"hasHint": true,
+			"id": 1,
+			"releaseDate": "2023-08-21T17:00:00.000Z",
+			"expires": false,
+			"solvedBy": [
+				{
+					"userId": "409123426641510402",
+					"date": "2023-08-21T23:32:23.777Z"
+				}
+			],
+			"solutionViewers": [],
+			"hintViewers": [
+				"409123426641510402"
+			],
+			"attempts": [
+				{
+					"userId": "409123426641510402",
+					"count": 2
+				}
+			],
+			"points": 5,
+			"answer": 1,
+			"active": true,
+			"released": true
+		},
+		{
+			"name": "ee",
+			"problem": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326104908738660/Screenshot_2023-08-20_at_10.21.39_PM.png",
+			"solution": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326105915359242/Screenshot_2023-08-20_at_10.19.46_PM.png",
+			"hint": "https://cdn.discordapp.com/ephemeral-attachments/1140077339053674560/1143326106984919100/Screenshot_2023-08-20_at_10.22.32_PM.png",
+			"hasHint": true,
+			"id": 1,
+			"releaseDate": "2023-08-21T17:00:00.000Z",
+			"expires": false,
+			"solvedBy": [
+				{
+					"userId": "409123426641510402",
+					"date": "2023-08-21T23:32:23.777Z"
+				}
+			],
+			"solutionViewers": [],
+			"hintViewers": [
+				"409123426641510402"
+			],
+			"attempts": [
+				{
+					"userId": "409123426641510402",
+					"count": 2
+				}
+			],
+			"points": 5,
+			"answer": 1,
+			"active": true,
+			"released": true
+		}
+	],
+	"potwRoleId": "1141141108206862358",
+	"solvedRoleId": "1143341343968596038",
+	"problemWriterRoleId": "1141141109981061180",
+	"potwChannelId": "1126301836920487946",
+	"latestReleaseId": 3
 }

@@ -8,6 +8,8 @@ dotenv.config();
 const client = new Client({
     intents: [
 		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.GuildMessageReactions
 	],
 })
 
@@ -40,4 +42,5 @@ for (const file of eventFiles) {
 	}
 }
 
+console.log(process.env.TOKEN);
 client.login(process.env.TOKEN);

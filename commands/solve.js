@@ -6,6 +6,7 @@ const Format = require('../misc/format.js');
 const data = new SlashCommandBuilder()
 	.setName('solve')
 	.setDescription('Attempt to solve a problem')
+    .setDMPermission(false)
     .addIntegerOption(option => option
 		.setName('problem-number')
 		.setDescription('The number of the problem to solve')
@@ -18,11 +19,26 @@ const data = new SlashCommandBuilder()
 
 async function validateAnswer(interaction, data, problem, answer) {
     if (answer !== problem.answer) {
-        await interaction.reply({content: Format.SOLVE_INCORRECT, ephemeral: true});
+        var numAttempts = 0;
+
+        for (var i = 0; i < problem.attempts.length; i ++) {
+            const attempt = problem.attempts[i];
+
+            if (attempt.userId === interaction.user.id)
+                numAttempts = ++attempt.count;
+        }
+
+        if (numAttempts === 0) {
+            problem.attempts.push({userId: interaction.user.id, count: 1});
+            numAttempts = 1;
+        }
+
+        await Data.write(interaction.guild.id, data);
+        await interaction.reply({content: Format.SOLVE_INCORRECT(numAttempts), ephemeral: true});
+
         return false;
     }
-    console.log(data.solvedRoleId + " ADADSAADSS")
-    console.log(interaction.guild.roles.cache);
+
     if (problem.id === data.latestReleaseId) {
         const role = interaction.guild.roles.cache.find((role => role.id === data.solvedRoleId));
         interaction.member.roles.add(role);
@@ -61,17 +77,16 @@ async function checkAnswer(interaction, data, problem, answer) {
     }
 
     if (userEntry === null) {
-        userEntry = {userId: userId, points: 0, solved: 0};
+        userEntry = {userId: userId, solved: []};
         data.leaderboard.push(userEntry);
     }
 
-    userEntry.points += problem.points;
-    userEntry.solved ++;
+    userEntry.solved.push(problem.id);
 
     problem.solvedBy.push({userId: userId, date: new Date()});
 
     return true;
-}        
+}
 
 async function execute(interaction) {
 	const data = await Data.read(interaction.guild.id);
@@ -85,7 +100,7 @@ async function execute(interaction) {
 
     if (await checkAnswer(interaction, data, problem, answer)) {
         await Data.write(interaction.guild.id, data);
-        await interaction.reply({content: Format.SOLVE_CORRECT(problem.points), ephemeral: true});
+        await interaction.reply({content: Format.SOLVE_CORRECT, ephemeral: true});
     }
 }
 

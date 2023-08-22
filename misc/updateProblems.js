@@ -70,7 +70,7 @@ async function updateProblems(guild, client) {
 
 function beginUpdates(guildId, client) {
 	const guild = client.guilds.cache.get(guildId);
-	callbackIds[guild.id] = setInterval(updateProblems, 60000, guild, client);
+	callbackIds[guild.id] = setInterval(updateProblems, 10000, guild, client);
 }
 
 function endUpdates(guildId) {

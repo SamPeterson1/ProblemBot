@@ -5,7 +5,8 @@ const Format = require('../misc/format.js');
 
 const data = new ContextMenuCommandBuilder()
 	.setName('Remove writer')
-	.setType(ApplicationCommandType.User);
+	.setType(ApplicationCommandType.User)
+    .setDMPermission(false);
 
 async function execute(interaction) {
     if (!interaction.member.permissions.has(PermissionsBitField.Flags.Administrator)) {

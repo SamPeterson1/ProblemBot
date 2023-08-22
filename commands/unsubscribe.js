@@ -4,7 +4,8 @@ const Format = require('../misc/format.js');
 
 const data = new SlashCommandBuilder()
 	.setName('unsubscribe')
-	.setDescription('Unsubscribe from weekly POTW notifications');
+	.setDescription('Unsubscribe from weekly POTW notifications')
+    .setDMPermission(false);
 
 async function execute(interaction, potwRoleId) {
     const data = await Data.read(interaction.guildId);

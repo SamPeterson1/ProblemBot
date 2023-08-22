@@ -4,11 +4,12 @@ const Format = require('../misc/format.js');
 
 const data = new SlashCommandBuilder()
 	.setName('releaseto')
-    .setDescription('Configure the bot')
+    .setDescription('Set the channel problems will be released to')
+    .setDMPermission(false)
     .addChannelOption(option => option
         .setName('release-channel')
         .addChannelTypes(ChannelType.GuildText)
-        .setDescription('The channel in which problems will be released')
+        .setDescription('The channel that problems will be released to')
         .setRequired(true))
     
 

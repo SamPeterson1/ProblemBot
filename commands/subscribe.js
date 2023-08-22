@@ -4,7 +4,8 @@ const Format = require('../misc/format.js');
 
 const data = new SlashCommandBuilder()
 	.setName('subscribe')
-	.setDescription('Subscribe to weekly POTW notifications');
+	.setDescription('Subscribe to weekly POTW notifications')
+    .setDMPermission(false);
 
 async function execute(interaction) {
     const data = await Data.read(interaction.guildId);

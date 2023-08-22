@@ -6,6 +6,7 @@ const Format = require('../misc/format.js');
 const data = new SlashCommandBuilder()
 	.setName('problem')
     .setDescription('Add or remove a problem')
+    .setDMPermission(false)
     .addSubcommand(subcommand => subcommand
         .setName('add')
         .setDescription('Add a new problem')
@@ -84,6 +85,8 @@ async function addProblem(interaction, data) {
         expirationDate: expirationDate,
         solvedBy: [],
         solutionViewers: [],
+        hintViewers: [],
+        attempts: [],
         points: interaction.options.getInteger('points'),
         answer: interaction.options.getInteger('answer'),
         active: false,
